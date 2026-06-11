@@ -30,6 +30,18 @@ Config file locations, in priority order:
 
 Use `config.example.json` as the template. Never print or expose `app_secret`.
 
+Never print config files directly with commands such as `cat`, `sed`, or `less`, because they contain `app_secret`. To inspect config safely, use targeted or redacted reads:
+
+```bash
+# Redacted overview.
+jq 'del(.app_secret)' "$CONFIG_PATH"
+
+# Single non-secret fields.
+jq -r '.test_chat_id' "$CONFIG_PATH"
+jq -r '.target_chat_id' "$CONFIG_PATH"
+jq -r '.schedule_doc_url' "$CONFIG_PATH"
+```
+
 If `requests` is missing, run this from the skill directory:
 
 ```bash
@@ -85,6 +97,12 @@ Strict status markers:
 | `🚫跳过0次(😀本周同学)` | Skip countdown reached zero; this person presents this week |
 | `😀已讲` | Deferred current marker; restored by the next rotation |
 
+If a target column contains multiple `😀本周同学` markers:
+
+- For direct "who presents" queries: report all marked presenters and say the schedule is ambiguous.
+- For reminders: list all marked presenters for that session.
+- Do not silently choose one presenter.
+
 Meeting time line format:
 
 ```text
@@ -109,7 +127,7 @@ Steps:
 2. Read the local cache.
 3. Determine side: Work Report/News use the left member column; Showcase Session uses the right member column.
 4. Special state has priority: if the target column contains both `🚫跳过0次(😀本周同学)` and `😀已讲`, the `🚫跳过0次(😀本周同学)` person presents this week.
-5. Otherwise find `😀本周同学` as the official presenter.
+5. Otherwise find every `😀本周同学` marker. If there are no markers, report that the target column has no current presenter and stop. If there are multiple markers, report all marked presenters and say the schedule is ambiguous; do not pick one. If there is exactly one marker, treat that person as the official presenter.
 6. Check only swap rows that mention the official presenter. If none mention them, stop: the official presenter is final.
 7. If a swap row mentions them, infer final presenter:
    - Both `[ ]`: the swap counterpart presents.
@@ -155,6 +173,18 @@ Do not ask for confirmation before sending a requested reminder. Pull the latest
 
 Use the available Feishu/Lark messaging tool for the active environment. If the environment provides a `message` tool, prefer it. If messaging tools are unavailable, draft the reminder text instead of pretending it was sent.
 
+In Codex or `lark-cli` environments, send reminders with:
+
+```bash
+lark-cli im +messages-send \
+  --as bot \
+  --chat-id "$CHAT_ID" \
+  --text "$REMINDER_TEXT" \
+  --json
+```
+
+For test reminders, `CHAT_ID` must be `test_chat_id`. For production reminders, `CHAT_ID` must be `target_chat_id`.
+
 Recommended config fields:
 
 - `target_chat_id`: production group chat ID.
@@ -170,6 +200,7 @@ Reminder content should include:
 - Schedule document URL.
 - Swap details when relevant.
 - For pre-meeting reminders, explicitly remind Showcase Session presenters to prepare their demo/content.
+- Emoji labels matching the example format: `📢`, `⌛️`, `👤`, `📰`, `🎯`, and `📋`.
 
 Example reminder:
 
