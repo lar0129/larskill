@@ -1,0 +1,18 @@
+{
+  "name": "feishu-group-meeting",
+  "version": "0.1.0",
+  "description": "Manage Feishu/Lark group meeting schedules with pull, query, rotation, reschedule, reminder, and push workflows.",
+  "author": {
+    "name": "Lianganran"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Feishu Group Meeting",
+    "shortDescription": "Manage Feishu/Lark group meeting schedule rotation.",
+    "longDescription": "Pull a Feishu Docx or Wiki group meeting schedule into Markdown, query current presenters, rotate weekly speakers, reschedule meeting time, draft/send reminders, and push updates back to Feishu.",
+    "developerName": "Lianganran",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use the Feishu group meeting skill to check this week's presenters."
+  }
+}

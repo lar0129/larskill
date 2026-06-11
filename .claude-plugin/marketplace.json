@@ -1,0 +1,21 @@
+{
+  "name": "lar-plugins",
+  "owner": {
+    "name": "Lianganran"
+  },
+  "description": "Portable agent plugins maintained by Lianganran.",
+  "plugins": [
+    {
+      "name": "feishu-group-meeting",
+      "source": "./plugins/feishu-group-meeting",
+      "displayName": "Feishu Group Meeting",
+      "description": "Manage Feishu/Lark group meeting schedules with pull, query, rotation, reschedule, reminder, and push workflows.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lianganran"
+      },
+      "category": "Productivity",
+      "tags": ["feishu", "lark", "meeting", "schedule"]
+    }
+  ]
+}

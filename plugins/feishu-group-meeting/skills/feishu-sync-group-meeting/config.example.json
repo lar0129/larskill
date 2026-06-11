@@ -1,0 +1,9 @@
+{
+  "app_id": "cli_xxxxxxxxxxxxxxxx",
+  "app_secret": "replace-with-your-feishu-app-secret",
+  "wiki_url": "https://example.feishu.cn/docx/xxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "md_file": "~/.cache/feishu-sync-group-meeting/feishu_schedule.md",
+  "target_chat_id": "oc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "test_chat_id": "oc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "schedule_doc_url": "https://example.feishu.cn/docx/xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}

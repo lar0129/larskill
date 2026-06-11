@@ -1,0 +1,8 @@
+{
+  "name": "feishu-group-meeting",
+  "description": "Manage Feishu/Lark group meeting schedules with pull, query, rotation, reschedule, reminder, and push workflows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Lianganran"
+  }
+}

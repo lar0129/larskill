@@ -1,0 +1,20 @@
+{
+  "name": "lar-plugins",
+  "interface": {
+    "displayName": "LAR Plugins"
+  },
+  "plugins": [
+    {
+      "name": "feishu-group-meeting",
+      "source": {
+        "source": "local",
+        "path": "./plugins/feishu-group-meeting"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
