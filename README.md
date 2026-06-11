@@ -33,10 +33,11 @@ Do not commit `config.json`; it is ignored by `.gitignore`.
 
 ## Codex
 
-Add this GitHub repository as a marketplace:
+Add this GitHub repository as a marketplace and install `feishu-group-meeting`:
 
 ```bash
 codex plugin marketplace add lar0129/larskill
+codex plugin add feishu-group-meeting@larskill
 ```
 
 For local testing:
@@ -45,9 +46,10 @@ For local testing:
 git clone git@github.com:lar0129/larskill.git
 cd larskill
 codex plugin marketplace add "$(pwd)"
+codex plugin add feishu-group-meeting@larskill
 ```
 
-Then open `/plugins`, choose the `larskill` marketplace, and install `feishu-group-meeting`.
+You can also open `/plugins`, choose the `larskill` marketplace, and install `feishu-group-meeting`.
 
 Update an existing Codex marketplace snapshot after this repository changes:
 
@@ -63,7 +65,7 @@ codex plugin marketplace upgrade
 
 ## Claude Code
 
-After this repository is pushed to GitHub, add and install:
+After this repository is pushed to GitHub, add the marketplace and install `feishu-group-meeting`:
 
 ```text
 /plugin marketplace add lar0129/larskill

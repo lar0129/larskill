@@ -7,6 +7,8 @@ description: Manage a Feishu/Lark group meeting schedule by pulling a docx/wiki 
 
 This skill manages a Feishu/Lark group meeting schedule stored in a Docx or Wiki document. It uses bundled Python scripts to pull the live document into a local Markdown cache, edit or rotate that cache, and push changes back to Feishu.
 
+When the user asks to send a reminder or modify the schedule document, do not ask for another confirmation. Pull the latest document, perform the requested action, validate the result, and send or push directly. Ask a question only when required information is missing, the target chat/document is unavailable, or the requested change is ambiguous.
+
 ## Setup
 
 Before first use, configure credentials with either environment variables or a local config file.
@@ -63,7 +65,7 @@ Default cache path: `~/.cache/feishu-sync-group-meeting/feishu_schedule.md`.
 2. Read the cache path from `python3 scripts/feishu_sync.py path`.
 3. Answer the user's query or edit only the requested schedule line/section.
 4. Validate that table markers and member order are still valid.
-5. Push only when the user requested a state-changing operation.
+5. For user-requested state-changing operations, push directly after validation without asking for an extra confirmation.
 
 ## Schedule Rules
 
@@ -149,6 +151,8 @@ Do not run the rotation script for a pure reschedule.
 
 Trigger: the user asks to send a group meeting reminder.
 
+Do not ask for confirmation before sending a requested reminder. Pull the latest schedule, identify the current meeting time and presenters, compose the reminder, and send it directly to the configured chat. If required chat configuration is missing, state the missing field and draft the exact message instead.
+
 Use the available Feishu/Lark messaging tool for the active environment. If the environment provides a `message` tool, prefer it. If messaging tools are unavailable, draft the reminder text instead of pretending it was sent.
 
 Recommended config fields:
@@ -166,3 +170,15 @@ Reminder content should include:
 - Schedule document URL.
 - Swap details when relevant.
 - For pre-meeting reminders, explicitly remind Showcase Session presenters to prepare their demo/content.
+
+Example reminder:
+
+```text
+📢 本周组会提醒
+⌛️ 时间：2026-05-15（周五）11:00–13:00
+👤 Work Report：黄天宇
+📰 News：黄炜、魏靖霖
+🎯 Showcase Session：蒋哲
+请负责 Showcase Session 的同学（蒋哲）提前准备好展示内容～
+📋 组会安排目录：<可访问的链接>
+```
