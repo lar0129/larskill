@@ -1,4 +1,4 @@
-# LAR Skill
+# larskill
 
 Portable Codex and Claude Code plugins.
 
@@ -47,12 +47,12 @@ cd larskill
 codex plugin marketplace add "$(pwd)"
 ```
 
-Then open `/plugins`, choose the `LAR Plugins` marketplace, and install `feishu-group-meeting`.
+Then open `/plugins`, choose the `larskill` marketplace, and install `feishu-group-meeting`.
 
 Update an existing Codex marketplace snapshot after this repository changes:
 
 ```bash
-codex plugin marketplace upgrade lar-plugins
+codex plugin marketplace upgrade larskill
 ```
 
 To update all configured Git marketplaces:
@@ -67,7 +67,7 @@ After this repository is pushed to GitHub, add and install:
 
 ```text
 /plugin marketplace add lar0129/larskill
-/plugin install feishu-group-meeting@lar-plugins
+/plugin install feishu-group-meeting@larskill
 ```
 
 For local testing:
@@ -76,13 +76,13 @@ For local testing:
 git clone git@github.com:lar0129/larskill.git
 cd larskill
 claude plugin marketplace add "$(pwd)"
-claude plugin install feishu-group-meeting@lar-plugins
+claude plugin install feishu-group-meeting@larskill
 ```
 
 Update an existing Claude Code marketplace snapshot after this repository changes:
 
 ```text
-/plugin marketplace update lar-plugins
+/plugin marketplace update larskill
 ```
 
 You can also load the plugin directory directly while developing:

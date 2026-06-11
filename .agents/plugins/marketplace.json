@@ -1,7 +1,7 @@
 {
-  "name": "lar-plugins",
+  "name": "larskill",
   "interface": {
-    "displayName": "LAR Plugins"
+    "displayName": "larskill"
   },
   "plugins": [
     {
