@@ -1,4 +1,4 @@
-# LAR Plugins
+# LAR Skill
 
 Portable Codex and Claude Code plugins.
 
@@ -33,16 +33,18 @@ Do not commit `config.json`; it is ignored by `.gitignore`.
 
 ## Codex
 
-After this repository is pushed to GitHub, add it as a marketplace:
+Add this GitHub repository as a marketplace:
 
 ```bash
-codex plugin marketplace add OWNER/lar-plugins
+codex plugin marketplace add lar0129/larskill
 ```
 
 For local testing:
 
 ```bash
-codex plugin marketplace add /home/lianganran/lianganran/lar-plugins
+git clone git@github.com:lar0129/larskill.git
+cd larskill
+codex plugin marketplace add "$(pwd)"
 ```
 
 Then open `/plugins`, choose the `LAR Plugins` marketplace, and install `feishu-group-meeting`.
@@ -52,19 +54,21 @@ Then open `/plugins`, choose the `LAR Plugins` marketplace, and install `feishu-
 After this repository is pushed to GitHub, add and install:
 
 ```text
-/plugin marketplace add OWNER/lar-plugins
+/plugin marketplace add lar0129/larskill
 /plugin install feishu-group-meeting@lar-plugins
 ```
 
 For local testing:
 
 ```bash
-claude plugin marketplace add /home/lianganran/lianganran/lar-plugins
+git clone git@github.com:lar0129/larskill.git
+cd larskill
+claude plugin marketplace add "$(pwd)"
 claude plugin install feishu-group-meeting@lar-plugins
 ```
 
 You can also load the plugin directory directly while developing:
 
 ```bash
-claude --plugin-dir /home/lianganran/lianganran/lar-plugins/plugins/feishu-group-meeting
+claude --plugin-dir "$(pwd)/plugins/feishu-group-meeting"
 ```
