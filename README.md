@@ -49,6 +49,18 @@ codex plugin marketplace add "$(pwd)"
 
 Then open `/plugins`, choose the `LAR Plugins` marketplace, and install `feishu-group-meeting`.
 
+Update an existing Codex marketplace snapshot after this repository changes:
+
+```bash
+codex plugin marketplace upgrade lar-plugins
+```
+
+To update all configured Git marketplaces:
+
+```bash
+codex plugin marketplace upgrade
+```
+
 ## Claude Code
 
 After this repository is pushed to GitHub, add and install:
@@ -67,8 +79,43 @@ claude plugin marketplace add "$(pwd)"
 claude plugin install feishu-group-meeting@lar-plugins
 ```
 
+Update an existing Claude Code marketplace snapshot after this repository changes:
+
+```text
+/plugin marketplace update lar-plugins
+```
+
 You can also load the plugin directory directly while developing:
 
 ```bash
 claude --plugin-dir "$(pwd)/plugins/feishu-group-meeting"
+```
+
+## Feishu/Lark Messaging
+
+This skill can use `lark-cli` to interact with Feishu/Lark when the local environment has it configured. For group reminders, initialize `lark-cli`, make sure the app has IM message scopes, and make sure the bot or user identity can access the target chat.
+
+Initialize `lark-cli`:
+
+```bash
+lark-cli config init --new
+```
+
+Send a group message as the app bot:
+
+```bash
+lark-cli im +messages-send --as bot --chat-id oc_xxx --markdown "Meeting reminder"
+```
+
+Send as the authorized user instead:
+
+```bash
+lark-cli auth login --scope "im:message"
+lark-cli im +messages-send --as user --chat-id oc_xxx --markdown "Meeting reminder"
+```
+
+Use `--dry-run` first when checking the outgoing message shape:
+
+```bash
+lark-cli im +messages-send --as bot --chat-id oc_xxx --markdown "Meeting reminder" --dry-run
 ```
