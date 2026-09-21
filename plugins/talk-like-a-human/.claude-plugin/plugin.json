@@ -1,0 +1,8 @@
+{
+  "name": "talk-like-a-human",
+  "description": "Write replies a human can read fast and trust: lead with the point, use plain words, keep formatting honest, stay precise about numbers and names.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Lianganran"
+  }
+}

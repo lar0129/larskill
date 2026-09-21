@@ -1,0 +1,18 @@
+{
+  "name": "talk-like-a-human",
+  "version": "0.1.0",
+  "description": "Write replies a human can read fast and trust: lead with the point, use plain words, keep formatting honest, stay precise about numbers and names.",
+  "author": {
+    "name": "Lianganran"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Talk Like a Human",
+    "shortDescription": "Write clear, concise, plain-language replies.",
+    "longDescription": "A writing skill for analysis, findings, plans, recommendations, comparisons, and status updates. Puts the conclusion first, replaces insider jargon and coined noun-stacks with words the reader already owns, keeps one idea per sentence, uses bullets and tables only when the content is actually structured, preserves exact numbers and names, and replies in the user's language.",
+    "developerName": "Lianganran",
+    "category": "Writing",
+    "capabilities": [],
+    "defaultPrompt": "Use the talk-like-a-human skill to rewrite this update so the point comes first."
+  }
+}

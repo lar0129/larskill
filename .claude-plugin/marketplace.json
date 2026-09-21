@@ -16,6 +16,18 @@
       },
       "category": "Productivity",
       "tags": ["feishu", "lark", "meeting", "schedule"]
+    },
+    {
+      "name": "talk-like-a-human",
+      "source": "./plugins/talk-like-a-human",
+      "displayName": "Talk Like a Human",
+      "description": "Write replies a human can read fast and trust: lead with the point, use plain words, keep formatting honest, stay precise about numbers and names.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lianganran"
+      },
+      "category": "Writing",
+      "tags": ["writing", "clarity", "plain-language", "style"]
     }
   ]
 }

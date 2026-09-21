@@ -5,6 +5,7 @@ Portable Codex and Claude Code plugins.
 ## Included Plugins
 
 - `feishu-group-meeting`: manage a Feishu/Lark group meeting schedule by pulling a Docx/Wiki document to Markdown, querying presenters, rotating weekly speakers, rescheduling meeting time, sending/drafting reminders, and pushing updates back to Feishu.
+- `talk-like-a-human`: write replies a human can read fast and trust. Leads with the point, swaps insider jargon for words the reader already owns, keeps one idea per sentence, uses bullets and tables only when the content is actually structured, preserves exact numbers and names, and replies in the user's language. Needs no configuration.
 
 ## Configure Feishu Group Meeting
 
@@ -38,6 +39,7 @@ Add this GitHub repository as a marketplace and install `feishu-group-meeting`:
 ```bash
 codex plugin marketplace add lar0129/larskill
 codex plugin add feishu-group-meeting@larskill
+codex plugin add talk-like-a-human@larskill
 ```
 
 For local testing:
@@ -70,6 +72,7 @@ After this repository is pushed to GitHub, add the marketplace and install `feis
 ```text
 /plugin marketplace add lar0129/larskill
 /plugin install feishu-group-meeting@larskill
+/plugin install talk-like-a-human@larskill
 ```
 
 For local testing:

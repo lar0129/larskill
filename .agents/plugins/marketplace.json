@@ -15,6 +15,17 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "talk-like-a-human",
+      "source": {
+        "source": "local",
+        "path": "./plugins/talk-like-a-human"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Writing"
     }
   ]
 }
