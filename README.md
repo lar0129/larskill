@@ -6,6 +6,7 @@ Portable Codex and Claude Code plugins.
 
 - `feishu-group-meeting`: manage a Feishu/Lark group meeting schedule by pulling a Docx/Wiki document to Markdown, querying presenters, rotating weekly speakers, rescheduling meeting time, sending/drafting reminders, and pushing updates back to Feishu.
 - `talk-like-a-human`: write replies a human can read fast and trust. Leads with the point, swaps insider jargon for words the reader already owns, keeps one idea per sentence, uses bullets and tables only when the content is actually structured, preserves exact numbers and names, and replies in the user's language. Needs no configuration.
+- `bug-verifier`: point it at a bug document and a source tree. It reads the accused code and the triggering test, traces whether the bad state is reachable from a public entry point with caller-controlled input, and returns one verdict: confirmed defect, latent defect, not a defect, or undetermined. For a real defect it writes an issue report (exact `file:line`, snippets, reproduction, expected versus actual, fix options) and an understanding guide (module role, design intent, invariants, unfamiliar concepts, history). Needs no configuration.
 
 ## Configure Feishu Group Meeting
 
@@ -40,6 +41,7 @@ Add this GitHub repository as a marketplace and install `feishu-group-meeting`:
 codex plugin marketplace add lar0129/larskill
 codex plugin add feishu-group-meeting@larskill
 codex plugin add talk-like-a-human@larskill
+codex plugin add bug-verifier@larskill
 ```
 
 For local testing:
@@ -73,6 +75,7 @@ After this repository is pushed to GitHub, add the marketplace and install `feis
 /plugin marketplace add lar0129/larskill
 /plugin install feishu-group-meeting@larskill
 /plugin install talk-like-a-human@larskill
+/plugin install bug-verifier@larskill
 ```
 
 For local testing:

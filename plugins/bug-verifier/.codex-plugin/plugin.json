@@ -1,0 +1,18 @@
+{
+  "name": "bug-verifier",
+  "version": "0.1.0",
+  "description": "Verify whether a reported bug is a real defect, then write an issue report a reviewer can act on and an understanding guide that teaches the module design behind it.",
+  "author": {
+    "name": "Lianganran"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bug Verifier",
+    "shortDescription": "Judge whether a reported bug is real, then document it.",
+    "longDescription": "Reads a bug document and the source tree it accuses, reads the named function and the triggering test, traces whether the bad state is reachable from a public entry point with caller-controlled input, and lands on one verdict: confirmed defect, latent defect, not a defect, or undetermined. For a real defect it writes two files: an issue report with exact file:line references, code snippets, reproduction, expected versus actual behavior, and fix options; and an understanding guide covering the module's role and design intent, the invariants it relies on, and the unfamiliar concepts a reader needs.",
+    "developerName": "Lianganran",
+    "category": "Development",
+    "capabilities": [],
+    "defaultPrompt": "Use the bug-verifier skill on this bug document and source directory: check whether it is a real defect, then write the issue report and the understanding guide."
+  }
+}

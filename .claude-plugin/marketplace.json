@@ -28,6 +28,18 @@
       },
       "category": "Writing",
       "tags": ["writing", "clarity", "plain-language", "style"]
+    },
+    {
+      "name": "bug-verifier",
+      "source": "./plugins/bug-verifier",
+      "displayName": "Bug Verifier",
+      "description": "Verify whether a reported bug is a real defect, then write an issue report a reviewer can act on and an understanding guide that teaches the module design behind it.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lianganran"
+      },
+      "category": "Development",
+      "tags": ["bug", "triage", "code-review", "debugging", "documentation"]
     }
   ]
 }

@@ -26,6 +26,17 @@
         "installation": "AVAILABLE"
       },
       "category": "Writing"
+    },
+    {
+      "name": "bug-verifier",
+      "source": {
+        "source": "local",
+        "path": "./plugins/bug-verifier"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Development"
     }
   ]
 }
