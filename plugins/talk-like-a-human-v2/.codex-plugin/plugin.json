@@ -1,0 +1,18 @@
+{
+  "name": "talk-like-a-human-v2",
+  "version": "0.1.0",
+  "description": "Use plain, complete language and follow explicit execution preferences through real verification.",
+  "author": {
+    "name": "Lianganran"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Talk Like a Human V2",
+    "shortDescription": "Use clear language and complete verified work.",
+    "longDescription": "Apply complete wording, direct answers, relevant research results, complete designs, manual file edits, and real verification across communication and implementation.",
+    "developerName": "Lianganran",
+    "category": "Writing",
+    "capabilities": [],
+    "defaultPrompt": "Use talk-like-a-human-v2 to follow my communication and execution preferences throughout this task."
+  }
+}

@@ -40,6 +40,18 @@
       },
       "category": "Development",
       "tags": ["bug", "triage", "code-review", "debugging", "documentation"]
+    },
+    {
+      "name": "talk-like-a-human-v2",
+      "source": "./plugins/talk-like-a-human-v2",
+      "displayName": "Talk Like a Human V2",
+      "description": "Use plain, complete language and follow explicit execution preferences through real verification.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lianganran"
+      },
+      "category": "Writing",
+      "tags": ["writing", "clarity", "plain-language", "workflow"]
     }
   ]
 }

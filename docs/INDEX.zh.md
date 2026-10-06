@@ -18,3 +18,4 @@
 | `plugins/bug-verifier/skills/verify-and-document-bug/references/understanding-guide-template.zh.md` | 同名 `.md` |
 | `plugins/feishu-group-meeting/skills/feishu-sync-group-meeting/SKILL.zh.md` | 同名 `SKILL.md` |
 | `plugins/talk-like-a-human/skills/talk-like-a-human/SKILL.zh.md` | 同名 `SKILL.md` |
+| `plugins/talk-like-a-human-v2/skills/talk-like-a-human-v2/SKILL.zh.md` | 同名 `SKILL.md` |

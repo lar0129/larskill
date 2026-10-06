@@ -37,6 +37,18 @@
         "installation": "AVAILABLE"
       },
       "category": "Development"
+    },
+    {
+      "name": "talk-like-a-human-v2",
+      "source": {
+        "source": "local",
+        "path": "./plugins/talk-like-a-human-v2"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Writing"
     }
   ]
 }
