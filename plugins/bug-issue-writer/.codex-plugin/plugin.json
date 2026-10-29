@@ -1,0 +1,20 @@
+{
+  "name": "bug-issue-writer",
+  "version": "0.1.0",
+  "description": "Delegate maintainer issue drafts to subagents and summarize expected versus actual behavior in a bug overview.",
+  "author": {
+    "name": "Lianganran"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bug Issue Writer",
+    "shortDescription": "Create maintainer issues and a concise bug overview.",
+    "longDescription": "Delegates issue writing to subagents using the existing source, complete tests, and original logs. The parent agent reviews each report and produces BUG-OVERVIEW.md with expected and actual behavior, impact, root cause, and links to the final reports. Includes issue and overview templates, a user-approved issue example, and interrupted-task recovery guidance.",
+    "developerName": "Lianganran",
+    "category": "Development",
+    "capabilities": [],
+    "defaultPrompt": [
+      "使用 $bug-issue-writer，调用 subagent 根据现有证据生成 issue，并汇总 BUG-OVERVIEW.md。"
+    ]
+  }
+}

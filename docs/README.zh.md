@@ -10,6 +10,7 @@
 - `feishu-group-meeting`：管理飞书/Lark 群组会日程 —— 把 Docx/Wiki 文档拉成 Markdown、查询本周汇报人、轮换每周讲者、调整组会时间、发送或起草提醒、并把改动推回飞书。
 - `talk-like-a-human`：写人能快速读懂并且信得过的回复。结论先行，把圈内行话换成读者本来就有的词，一句话一个意思，只有内容真的有结构时才用项目符号和表格，保留确切的数字和名字，并用用户的语言回复。无需配置。
 - `bug-verifier`：给它一份 bug 文档和一份源码目录。它会读被指控的代码和触发用的测试，追查那个坏状态是否能从公开入口用调用者可控的参数到达，并给出一个结论：确认缺陷、潜伏缺陷、不是缺陷、或未定。对真缺陷，它会产出一份 issue 报告（确切的 `file:line`、代码片段、复现、预期 vs 实际、修复方案）和一份理解指南（模块职责、设计意图、不变量、陌生概念、历史沿革）。无需配置。
+- `bug-issue-writer`：调用 subagent 按现有源码、测试和日志生成 issue，主代理复核后生成 `BUG-OVERVIEW.md`，汇总预期行为、实际行为、影响和根因，并链接到最终报告。支持中断恢复，附 issue 与 overview 模板及用户确认的 issue 定稿样例。无需配置。
 
 ## 配置 Feishu Group Meeting
 
@@ -46,6 +47,7 @@ codex plugin add feishu-group-meeting@larskill
 codex plugin add talk-like-a-human@larskill
 codex plugin add talk-like-a-human-v2@larskill
 codex plugin add bug-verifier@larskill
+codex plugin add bug-issue-writer@larskill
 ```
 
 本地测试：
@@ -81,6 +83,7 @@ codex plugin marketplace upgrade
 /plugin install talk-like-a-human@larskill
 /plugin install talk-like-a-human-v2@larskill
 /plugin install bug-verifier@larskill
+/plugin install bug-issue-writer@larskill
 ```
 
 本地测试：

@@ -1,0 +1,8 @@
+{
+  "name": "bug-issue-writer",
+  "description": "Delegate maintainer issue drafts to subagents and summarize expected versus actual behavior in a bug overview.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Lianganran"
+  }
+}

@@ -49,6 +49,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Writing"
+    },
+    {
+      "name": "bug-issue-writer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/bug-issue-writer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
     }
   ]
 }

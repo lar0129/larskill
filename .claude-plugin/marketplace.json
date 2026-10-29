@@ -52,6 +52,18 @@
       },
       "category": "Writing",
       "tags": ["writing", "clarity", "plain-language", "workflow"]
+    },
+    {
+      "name": "bug-issue-writer",
+      "source": "./plugins/bug-issue-writer",
+      "displayName": "Bug Issue Writer",
+      "description": "Delegate evidence-based issue writing to subagents, review their reports, and summarize expected versus actual behavior in a bug overview.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lianganran"
+      },
+      "category": "Development",
+      "tags": ["bug", "issue", "writing", "reproduction", "documentation"]
     }
   ]
 }

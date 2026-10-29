@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bug Issue Writer"
+  short_description: "调用子代理生成维护者 issue，并汇总预期与实际行为概览"
+  default_prompt: "使用 $bug-issue-writer，调用 subagent 根据现有证据生成 issue，并汇总 BUG-OVERVIEW.md。"
